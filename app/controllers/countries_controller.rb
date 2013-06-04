@@ -24,7 +24,7 @@ class CountriesController < ApplicationController
   # GET /countries/new
   # GET /countries/new.json
   def new
-    @country = Country.new
+    @country = Country.new(:parent_id => params[:parent_id])
 
     respond_to do |format|
       format.html # new.html.erb

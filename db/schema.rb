@@ -11,11 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604122733) do
+ActiveRecord::Schema.define(:version => 20130604131527) do
 
   create_table "countries", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "ancestry"
   end
+
+  add_index "countries", ["ancestry"], :name => "index_countries_on_ancestry"
 
 end
