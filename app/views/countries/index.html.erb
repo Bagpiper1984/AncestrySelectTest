@@ -1,5 +1,17 @@
 <h1>Listing countries</h1>
 
+<div class="countries">
+  <%= select("project", "countries", Country::COUNTRIES)  %>
+</div>
+
+<div class="america_sities">
+  <%= select("project", "sities", Country::AMERICA_SITIES)  %>
+</div>
+
+<div class="russia_sities">
+  <%= select("project", "sities", Country::RUSSIA_SITIES)  %>
+</div>
+
 <table>
   <tr>
     <th></th>
